@@ -15,6 +15,8 @@ bugs, and so on ? Here it is the little brother of it.
 
 I tryed so long to : compile it, debug it. I tried to figure out how it works but I'm too stupid and I wanted a fully custom server side so I decided to write a my own meterpreter. So based on the work of **Stephen Fewer** I wrote down this source.
 
+![cli1](http://i68.tinypic.com/30u3joh.png)
+
 ## Basically how it works ? 
 
 Using the DLL injection technique it infects a process in order to run the reverse shell and connect back to the C&C.. of course I could give you a ultra technical explaination talking about the RemoteThread or CreateThread event and so on but Stephen worked so hard on this so just bounce on his project and read there everything. Some days ago a dude called SandBox..something created a Poc using the same technique merged to a 0day exploit giving to the process elevated privileges ... You can google it and finding the sources it might be an extra feature but in this project I don't want anything else. So the DLL Injection allows to avoid .. more less to be detected by AVs, IDs, ... In order to not create another process for the malware, this also is called FILELESS malware so the DLL gets executed in memory by the infected process so nothing will be written on the HD, this will make the reverse engineering more difficult ( obfuscate the DLL and you rock. ) 
